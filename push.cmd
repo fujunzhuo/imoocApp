@@ -11,3 +11,6 @@ git commit -m 'RollerSkatingApp'
 git commit -m 'RollerSkatingApp'
 git commit -m 'RollerSkatingApp'
 git push origin master
+git push origin master
+git push origin master
+git push origin master
