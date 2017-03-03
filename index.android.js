@@ -11,7 +11,7 @@ import {
   Text,
   View,
   Image,
-    ScrollView,
+  ScrollView,
 } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 
@@ -82,9 +82,9 @@ var tabIcon = {
 }
 const styles = StyleSheet.create({
     sceneStyle:{
-        flex: 1,
+        /*flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center',*/
         backgroundColor: '#F5FCFF',
     },
     border:{
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     },
     selectedTitleStyle:{
 
-    },
+    }
 });
 
 AppRegistry.registerComponent('imoocApp', () => imoocApp);
