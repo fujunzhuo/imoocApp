@@ -15,6 +15,13 @@ var request = require('../common/request');
 var config = require('../common/config');
 
 var width = Dimensions.get('window').width;
+
+var cachedResults = {
+    nextPage:1,
+    items:[],
+    total:0
+}
+
 class Icon extends Component {
     constructor(props){
         super(props);
@@ -32,13 +39,13 @@ class List extends Component {
         super(props);
         var ds = new ListView.DataSource({rowHasChanged:(r1,r2) => r1 != r2});
         this.state = {
-            dataSource:ds.cloneWithRows([])
+            dataSource:ds.cloneWithRows([]),
+            isLoadingTail:false,
         }
     }
 
 
-
-    renderRow(row){
+    _renderRow(row){
         return(
             <TouchableHighlight>
                 <View style={styles.item}>
@@ -55,30 +62,77 @@ class List extends Component {
         );
     }
 
-
     componentDidMount(){
-        this._fetchData()
+        this._fetchData(1)
     }
 
-    _fetchData(){
-        request.get(config.api.base + config.api.creations,{accessToken:'abacadedsa'})
+    _fetchData(page){
+
+        var that = this;
+        this.setState({
+            isLoadingTail:true
+        });
+
+        request.get(config.api.base + config.api.creations,{
+            accessToken:'abacadedsa',
+            page:page
+        })
             .then((data)=>{
                 //console.log(data);
                 //alert(JSON.stringify(data));
-                //console.log(response);
-                //if(data.success){
-                    this.setState({
-                        dataSource:this.state.dataSource.cloneWithRows(data.data)
-                    });
-                //}
+                if(data.success){
+                    var items = cachedResults.items.slice();
+                    items = items.concat(data.data);
+                    cachedResults.items = items;
+                    cachedResults.total = data.total;
+                    setTimeout(()=>{
+                        that.setState({
+                            isLoadingTail:false,
+                            dataSource:that.state.dataSource.cloneWithRows(cachedResults.items)
+                        });
+                    },2000);
+                }
 
 
             })
             .catch((error)=>{
+                this.setState({
+                    isLoadingTail:false
+                })
                 console.warn(error);
             })
     }
 
+    _hasMore(){
+        return cachedResults.items.length !== cachedResults.total
+    }
+
+    _fetchMoreData(){
+        if(!this._hasMore() || this.state.isLoadingTail){
+            return
+        }
+
+        var page = cachedResults.nextPage;
+        this._fetchData(page);
+    }
+
+    _renderFooter(){
+        alert(this._hasMore());
+
+        /*if(!this._hasMore()){
+            return(
+                <View style={styles.loadingMore}>
+                    <Text style={styles.loadingText}>没有更多了</Text>
+                </View>
+            );
+        }*/
+        return(
+            <View style={styles.loadingMore}>
+                <Text style={styles.loadingText}>正在加载中。。。</Text>
+            </View>
+        );
+
+    }
     render(){
         return(
             <View style={styles.container}>
@@ -87,7 +141,10 @@ class List extends Component {
                 </View>
                 <ListView
                     dataSource={this.state.dataSource}
-                    renderRow={this.renderRow.bind(this)}
+                    renderRow={this._renderRow}
+                    onEndReached={this._fetchMoreData}
+                    onEndReachedThreshold={20}
+                    renderFooter={this._renderFooter}
                     enableEmptySections={true} />
             </View>
         );
@@ -163,6 +220,14 @@ var styles = StyleSheet.create({
     commentIcon:{
         fontSize:22,
         color:'#333'
-    }
+    },
+    loadingMore:{
+        marginVertical:20
+    },
+    loadingText:{
+        //color:'#777',
+        color:'blue',
+        textAlign:'center'
+    },
 })
 module.exports = List;

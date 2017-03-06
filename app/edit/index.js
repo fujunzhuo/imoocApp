@@ -12,7 +12,7 @@ class Edit extends Component {
     render(){
         return(
             <View>
-                <Text>制作页面</Text>
+                <Text style={{fontSize:80}}>制作页面</Text>
             </View>
         );
     }

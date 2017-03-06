@@ -12,7 +12,7 @@ class Account extends Component {
     render(){
         return(
             <View>
-                <Text>账户页面</Text>
+                <Text style={{fontSize:80}}>账户页面</Text>
             </View>
         );
     }
