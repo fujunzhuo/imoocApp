@@ -9,6 +9,7 @@ import {
     ListView,
     TouchableHighlight,
     Dimensions,
+    ActivityIndicator
 } from 'react-native';
 var Mock = require('mockjs');
 var request = require('../common/request');
@@ -117,7 +118,7 @@ class List extends Component {
     }
 
     _renderFooter(){
-        if(!this._hasMore()){
+        if(!this._hasMore() && cachedResults.total !== 0){
             return(
                 <View style={styles.loadingMore}>
                     <Text style={styles.loadingText}>没有更多了</Text>
@@ -126,7 +127,11 @@ class List extends Component {
         }
         return(
             <View style={styles.loadingMore}>
-                <Text style={styles.loadingText}>正在加载中。。。</Text>
+                <ActivityIndicator
+                    animating={true}
+                    style={[styles.centering]}
+                    size="large"
+                />
             </View>
         );
 
@@ -140,7 +145,7 @@ class List extends Component {
                 <ListView
                     dataSource={this.state.dataSource}
                     renderRow={this._renderRow}
-                    onEndReached={this._fetchMoreData}
+                    onEndReached={this._fetchMoreData.bind(this)}
                     onEndReachedThreshold={20}
                     renderFooter={this._renderFooter.bind(this)}
                     enableEmptySections={true} />
@@ -227,5 +232,20 @@ var styles = StyleSheet.create({
         color:'blue',
         textAlign:'center'
     },
+
+    centering: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 8,
+    },
+    gray: {
+        backgroundColor: '#cccccc',
+    },
+    horizontal: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        padding: 8,
+    },
+
 })
 module.exports = List;
