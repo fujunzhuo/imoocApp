@@ -117,15 +117,13 @@ class List extends Component {
     }
 
     _renderFooter(){
-        alert(this._hasMore());
-
-        /*if(!this._hasMore()){
+        if(!this._hasMore()){
             return(
                 <View style={styles.loadingMore}>
                     <Text style={styles.loadingText}>没有更多了</Text>
                 </View>
             );
-        }*/
+        }
         return(
             <View style={styles.loadingMore}>
                 <Text style={styles.loadingText}>正在加载中。。。</Text>
@@ -144,7 +142,7 @@ class List extends Component {
                     renderRow={this._renderRow}
                     onEndReached={this._fetchMoreData}
                     onEndReachedThreshold={20}
-                    renderFooter={this._renderFooter}
+                    renderFooter={this._renderFooter.bind(this)}
                     enableEmptySections={true} />
             </View>
         );
