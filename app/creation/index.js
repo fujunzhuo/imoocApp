@@ -9,7 +9,8 @@ import {
     ListView,
     TouchableHighlight,
     Dimensions,
-    ActivityIndicator
+    ActivityIndicator,
+    RefreshControl
 } from 'react-native';
 var Mock = require('mockjs');
 var request = require('../common/request');
@@ -42,6 +43,7 @@ class List extends Component {
         this.state = {
             dataSource:ds.cloneWithRows([]),
             isLoadingTail:false,
+            isRefreshing:false,
         }
     }
 
@@ -70,36 +72,64 @@ class List extends Component {
     _fetchData(page){
 
         var that = this;
-        this.setState({
-            isLoadingTail:true
-        });
+
+        if(page !== 0){
+            this.setState({
+                isLoadingTail:true
+            });
+        }
+        else {
+            this.setState({
+                isRefreshing:true
+            });
+        }
 
         request.get(config.api.base + config.api.creations,{
             accessToken:'abacadedsa',
             page:page
-        })
-            .then((data)=>{
+        }).then((data)=>{
                 //console.log(data);
-                //alert(JSON.stringify(data));
+                alert(JSON.stringify(data));
                 if(data.success){
                     var items = cachedResults.items.slice();
-                    items = items.concat(data.data);
+                    if(page !== 0){
+                        items = items.concat(data.data);
+                        cachedResults.nextPage += 1;
+                    }
+                    else{
+                        items = data.data.concat(items);
+                    }
                     cachedResults.items = items;
                     cachedResults.total = data.total;
                     setTimeout(()=>{
-                        that.setState({
-                            isLoadingTail:false,
-                            dataSource:that.state.dataSource.cloneWithRows(cachedResults.items)
-                        });
+                        if(page !== 0){
+                            that.setState({
+                                isLoadingTail:false,
+                                dataSource:that.state.dataSource.cloneWithRows(cachedResults.items)
+                            });
+                        }
+                        else{
+                            that.setState({
+                                isRefreshing:false,
+                                dataSource:that.state.dataSource.cloneWithRows(cachedResults.items)
+                            });
+                        }
                     },2000);
                 }
 
 
             })
             .catch((error)=>{
-                this.setState({
-                    isLoadingTail:false
-                })
+                if(page !== 0){
+                    this.setState({
+                        isLoadingTail:false
+                    })
+                }
+                else{
+                    this.setState({
+                        isRefreshing:false
+                    })
+                }
                 console.warn(error);
             })
     }
@@ -116,7 +146,12 @@ class List extends Component {
         var page = cachedResults.nextPage;
         this._fetchData(page);
     }
-
+    _onRefresh(){
+        if(!this._hasMore() || this.state.isRefreshing){
+            return
+        }
+        this._fetchData(0);
+    }
     _renderFooter(){
         if(!this._hasMore() && cachedResults.total !== 0){
             return(
@@ -125,14 +160,21 @@ class List extends Component {
                 </View>
             );
         }
+
+        if(!this.state.isLoadingTail){
+            return (
+                <View style={styles.loadingMore}>
+
+                </View>
+            );
+        }
+
         return(
-            <View style={styles.loadingMore}>
                 <ActivityIndicator
                     animating={true}
                     style={[styles.centering]}
                     size="large"
                 />
-            </View>
         );
 
     }
@@ -143,12 +185,25 @@ class List extends Component {
                     <Text style={styles.headerTitle}>列表页面</Text>
                 </View>
                 <ListView
+                    showsVerticalScrollIndicator={false}
                     dataSource={this.state.dataSource}
                     renderRow={this._renderRow}
                     onEndReached={this._fetchMoreData.bind(this)}
                     onEndReachedThreshold={20}
                     renderFooter={this._renderFooter.bind(this)}
-                    enableEmptySections={true} />
+                    enableEmptySections={true}
+                    refreshControl={
+                      <RefreshControl
+                        refreshing={this.state.isRefreshing}
+                        onRefresh={this._onRefresh.bind(this)}
+                        tintColor="#ff0000"
+                        title="拼命加载中..."
+                        titleColor="#00ff00"
+                        colors={['#ff0000', '#00ff00', '#0000ff']}
+                        progressBackgroundColor="#ffff00"
+                      />
+                    }
+                />
             </View>
         );
     }
