@@ -32,6 +32,66 @@ var cachedResults = {
     total:0
 }
 
+class Item extends Component {
+    constructor(props){
+        super(props)
+      var row = this.props.row;
+        this.state = {
+            up:row.voted,
+            row:row
+        }
+    }
+
+    _up() {
+        var that = this;
+        var up = !this.state.up;
+        var row = this.state.row;
+        var url = config.api.base + config.api.up
+        var body = {
+            id:row._id,
+            up: up ?'yes':'no',
+            accessToken :'abcee'
+        }
+
+        request.post(url,body)
+          .then((data)=>{
+            alert(JSON.stringify(data));
+
+            if(data && data.success){
+              that.setState({
+                    up:up
+              })
+            }
+            else{
+                alert('点赞失败，稍后重试');
+            }
+          })
+          .catch((e)=>{
+                console.log(e)
+                alert('点赞失败，稍后重试');
+          })
+    }
+
+    render(){
+        var row = this.state.row;
+        return(
+          <TouchableHighlight>
+              <View style={styles.item}>
+                  <Text style={styles.title}>{row.title}</Text>
+                  <Image source={{uri:row.thumb}} style={styles.thumb}>
+                      <View style={[styles.play,styles.playBtn]}>
+                          <FontAwesome name="play" size={30} color="#ee735c"/>
+                      </View>
+                  </Image>
+                  <View style={styles.itemFooter}>
+                      <View style={styles.handleBox}><Text onPress={this._up.bind(this)} style={[styles.handleText,!this.state.up ? null : styles.down]}>喜欢</Text></View>
+                      <View style={styles.handleBox}><Text style={styles.handleText}>评论</Text></View>
+                  </View>
+              </View>
+          </TouchableHighlight>
+        )
+    }
+}
 class List extends Component {
     constructor(props){
         super(props);
@@ -46,18 +106,7 @@ class List extends Component {
 
     _renderRow(row){
         return(
-            <TouchableHighlight>
-                <View style={styles.item}>
-                    <Text style={styles.title}>{row.title}</Text>
-                    <Image source={{uri:row.thumb}} style={styles.thumb}>
-                        <View style={styles.play}><FontAwesome name="play" size={30} color="white" /></View>
-                    </Image>
-                    <View style={styles.itemFooter}>
-                        <View style={styles.handleBox}><Text style={styles.handleText}>喜欢</Text></View>
-                        <View style={styles.handleBox}><Text style={styles.handleText}>评论</Text></View>
-                    </View>
-                </View>
-            </TouchableHighlight>
+          <Item row={row} />
         );
     }
 
@@ -179,11 +228,6 @@ class List extends Component {
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.headerTitle}>列表页面</Text>
-
-                    <Ionicons name="ion-grid" size={50} color="black" />
-                    <FontAwesome name="step-forward" size={20} color="#4F8EF7" />
-
-
                 </View>
                 <ListView
                     showsVerticalScrollIndicator={false}
@@ -243,14 +287,16 @@ var styles = StyleSheet.create({
         right:14,
         width:46,
         height:46,
-        paddingTop:9,
-        paddingLeft:18,
+        paddingTop:0,
+        paddingLeft:8,
         backgroundColor:'transparent',
-        borderColor:'#fff',
-        borderWidth:1,
-        borderRadius:23,
-        justifyContent:'flex-start',
+        justifyContent:'center',
         alignItems:'center'
+    },
+    playBtn:{
+      borderColor:'#fff',
+      borderWidth:1,
+      borderRadius:23,
     },
     title:{
         padding:10,
@@ -301,6 +347,10 @@ var styles = StyleSheet.create({
         justifyContent: 'space-around',
         padding: 8,
     },
+    down:{
+        color:'red',
+        fontWeight:'bold'
+    }
 
 })
 module.exports = List;
