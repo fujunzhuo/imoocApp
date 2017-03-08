@@ -12,11 +12,19 @@ import {
     ActivityIndicator,
     RefreshControl
 } from 'react-native';
+
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
+
+
 var Mock = require('mockjs');
 var request = require('../common/request');
 var config = require('../common/config');
 
 var width = Dimensions.get('window').width;
+
+
+
 
 var cachedResults = {
     nextPage:1,
@@ -24,18 +32,6 @@ var cachedResults = {
     total:0
 }
 
-class Icon extends Component {
-    constructor(props){
-        super(props);
-    }
-    render(){
-        return(
-            <View style={this.props.style}>
-                <Image source={require('../../img/tab/tab_discovery_p.png')} style={{width:30,height:30}} />
-            </View>
-        );
-    }
-}
 class List extends Component {
     constructor(props){
         super(props);
@@ -54,7 +50,7 @@ class List extends Component {
                 <View style={styles.item}>
                     <Text style={styles.title}>{row.title}</Text>
                     <Image source={{uri:row.thumb}} style={styles.thumb}>
-                        <Icon style={styles.play} />
+                        <View style={styles.play}><FontAwesome name="play" size={30} color="white" /></View>
                     </Image>
                     <View style={styles.itemFooter}>
                         <View style={styles.handleBox}><Text style={styles.handleText}>喜欢</Text></View>
@@ -183,6 +179,11 @@ class List extends Component {
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.headerTitle}>列表页面</Text>
+
+                    <Ionicons name="ion-grid" size={50} color="black" />
+                    <FontAwesome name="step-forward" size={20} color="#4F8EF7" />
+
+
                 </View>
                 <ListView
                     showsVerticalScrollIndicator={false}
@@ -248,7 +249,8 @@ var styles = StyleSheet.create({
         borderColor:'#fff',
         borderWidth:1,
         borderRadius:23,
-        //color:'#ed7b66',
+        justifyContent:'flex-start',
+        alignItems:'center'
     },
     title:{
         padding:10,
