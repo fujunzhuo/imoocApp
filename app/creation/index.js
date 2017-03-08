@@ -89,7 +89,7 @@ class List extends Component {
             page:page
         }).then((data)=>{
                 //console.log(data);
-                alert(JSON.stringify(data));
+                //alert(JSON.stringify(data));
                 if(data.success){
                     var items = cachedResults.items.slice();
                     if(page !== 0){
@@ -173,7 +173,7 @@ class List extends Component {
                 <ActivityIndicator
                     animating={true}
                     style={[styles.centering]}
-                    size="large"
+                    size={300}
                 />
         );
 
@@ -196,11 +196,9 @@ class List extends Component {
                       <RefreshControl
                         refreshing={this.state.isRefreshing}
                         onRefresh={this._onRefresh.bind(this)}
-                        tintColor="#ff0000"
-                        title="拼命加载中..."
-                        titleColor="#00ff00"
-                        colors={['#ff0000', '#00ff00', '#0000ff']}
-                        progressBackgroundColor="#ffff00"
+                        titleColor="black"
+                        colors={['#4285f4', '#f7f7f7', '#f7f7f7']}
+                        progressBackgroundColor="#f7f7f7"
                       />
                     }
                 />
