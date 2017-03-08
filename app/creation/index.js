@@ -55,20 +55,17 @@ class Item extends Component {
 
         request.post(url,body)
           .then((data)=>{
-            alert(JSON.stringify(data));
-
             if(data && data.success){
               that.setState({
                     up:up
               })
             }
             else{
-                alert('点赞失败，稍后重试');
+                alert('点赞失败，稍后重试1');
             }
           })
           .catch((e)=>{
-                console.log(e)
-                alert('点赞失败，稍后重试');
+                alert('点赞失败，稍后重试2');
           })
     }
 
@@ -84,7 +81,7 @@ class Item extends Component {
                       </View>
                   </Image>
                   <View style={styles.itemFooter}>
-                      <View style={styles.handleBox}><Text onPress={this._up.bind(this)} style={[styles.handleText,!this.state.up ? null : styles.down]}>喜欢</Text></View>
+                      <View style={styles.handleBox}><Text onPress={this._up.bind(this)} style={[styles.handleText,!this.state.up ? null : styles.down]}> {!this.state.up?'喜欢':'取消喜欢'}</Text></View>
                       <View style={styles.handleBox}><Text style={styles.handleText}>评论</Text></View>
                   </View>
               </View>
