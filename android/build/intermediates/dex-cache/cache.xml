@@ -2,25 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0-e12d206cab832d28dd1ac08be5ffa963e2c33c39.jar" />
-    </item>
-    <item
-        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\javax.inject-1-76b95d6a38e12eab9900b64de8a24e34aeb4675e.jar" />
-    </item>
-    <item
-        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-c3c1b7700fad31e6b00fa30a491da6853258de7b.jar" />
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-fe6dda7e88c6169a568f23ab5f849046d65b2cdd.jar" />
     </item>
     <item
         jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.41.2\jars\libs\infer-annotations-1.5.jar"
@@ -30,116 +16,11 @@
         <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\infer-annotations-1.5-b54ea259911c73a01e0715e3297a3c886f179780.jar" />
     </item>
     <item
-        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-676c8fc6410ab1b56556303044e3b0534b74ee23.jar" />
-    </item>
-    <item
-        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\0.11.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-37026524000aaf96048aecbdc6f23668bbbf7f0f.jar" />
-    </item>
-    <item
-        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-9f62df447f9edbd1f44bace1b73aece6c4844e8a.jar" />
-    </item>
-    <item
-        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\0.11.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-46fb35bbea91751940e636fd4061707abecdf5c5.jar" />
-    </item>
-    <item
         jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
         <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-11693e768373259372e8dc224c51864d4bed45a0.jar" />
-    </item>
-    <item
-        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\okio-1.9.0-5698b1272d1373c20ee4420daddab566af567fde.jar" />
-    </item>
-    <item
-        jar="D:\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0-fb9a26873371dc18cb49f7a0b725dba248d20867.jar" />
-    </item>
-    <item
-        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\0.11.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-11b7cea0aaa0bae14bdac3a736fde82f9de0990d.jar" />
-    </item>
-    <item
-        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.4.1\63994437f62bc861bc20c605d12962f7246116d1\okhttp-urlconnection-3.4.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.4.1-0d2b9c8783ae5673a85e49e63d738f08bc900a70.jar" />
-    </item>
-    <item
-        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-ws\3.4.1\8ace66ef7002d98f633377c9e67daeeb196d8c3b\okhttp-ws-3.4.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\okhttp-ws-3.4.1-1c84221b0e1a8247695381942488163c8a5e5580.jar" />
-    </item>
-    <item
-        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\0.11.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-de801c3fe8394de725120d6d8c1eb9a7fb9c713a.jar" />
-    </item>
-    <item
-        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\0.11.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-a3b07b180d18a308d2d443f8bfddcfdbf438df24.jar" />
-    </item>
-    <item
-        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\library-2.4.0-b826895d8e67b56d1cbe8609b8a056ac96e2d2d2.jar" />
-    </item>
-    <item
-        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-fe6dda7e88c6169a568f23ab5f849046d65b2cdd.jar" />
-    </item>
-    <item
-        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0-f630541c2f31c944f4f022ca10f02ecb3d1ea541.jar" />
-    </item>
-    <item
-        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0-9e3db43f319112853d3f6c93519ad1064652e2c0.jar" />
     </item>
     <item
         jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
@@ -156,6 +37,90 @@
         <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-c1a955808282181f6a7e48f6c4b45601434b585e.jar" />
     </item>
     <item
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\0.11.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-37026524000aaf96048aecbdc6f23668bbbf7f0f.jar" />
+    </item>
+    <item
+        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\okio-1.9.0-5698b1272d1373c20ee4420daddab566af567fde.jar" />
+    </item>
+    <item
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-c3c1b7700fad31e6b00fa30a491da6853258de7b.jar" />
+    </item>
+    <item
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\0.11.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-de801c3fe8394de725120d6d8c1eb9a7fb9c713a.jar" />
+    </item>
+    <item
+        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0-e12d206cab832d28dd1ac08be5ffa963e2c33c39.jar" />
+    </item>
+    <item
+        jar="D:\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0-fb9a26873371dc18cb49f7a0b725dba248d20867.jar" />
+    </item>
+    <item
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\0.11.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-46fb35bbea91751940e636fd4061707abecdf5c5.jar" />
+    </item>
+    <item
+        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\javax.inject-1-76b95d6a38e12eab9900b64de8a24e34aeb4675e.jar" />
+    </item>
+    <item
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-676c8fc6410ab1b56556303044e3b0534b74ee23.jar" />
+    </item>
+    <item
+        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0-f630541c2f31c944f4f022ca10f02ecb3d1ea541.jar" />
+    </item>
+    <item
+        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0-9e3db43f319112853d3f6c93519ad1064652e2c0.jar" />
+    </item>
+    <item
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-9f62df447f9edbd1f44bace1b73aece6c4844e8a.jar" />
+    </item>
+    <item
         jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -163,11 +128,53 @@
         <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1-5b324ec820c8ca6dc4ceaae5d35e4fcc91ba7718.jar" />
     </item>
     <item
+        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-ws\3.4.1\8ace66ef7002d98f633377c9e67daeeb196d8c3b\okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\okhttp-ws-3.4.1-1c84221b0e1a8247695381942488163c8a5e5580.jar" />
+    </item>
+    <item
+        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.4.1\63994437f62bc861bc20c605d12962f7246116d1\okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.4.1-0d2b9c8783ae5673a85e49e63d738f08bc900a70.jar" />
+    </item>
+    <item
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\0.11.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-11b7cea0aaa0bae14bdac3a736fde82f9de0990d.jar" />
+    </item>
+    <item
         jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.41.2\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="b49a04a3016689b372ecbb77f0c33e486e768cca">
         <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-3a33add70d5873dab63e709f006b48edcd8dc03b.jar" />
+    </item>
+    <item
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\imoocApp\react-native-vector-icons\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="61ce145f4f3970acf2c14cac8912b043621cf437">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-c0fdc767d5655bd62e40a35e0028daefc2116c02.jar" />
+    </item>
+    <item
+        jar="C:\Users\root\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\library-2.4.0-b826895d8e67b56d1cbe8609b8a056ac96e2d2d2.jar" />
+    </item>
+    <item
+        jar="E:\project\imoocApp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\0.11.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="E:\project\imoocApp\android\app\build\intermediates\pre-dexed\debug\classes-a3b07b180d18a308d2d443f8bfddcfdbf438df24.jar" />
     </item>
 
 </items>

@@ -68,11 +68,16 @@ class Item extends Component {
                 alert('点赞失败，稍后重试2');
           })
     }
-
+    _loadPage(){
+        this.props.navigator.push({
+            name:'detail',
+            component:Detail
+        });
+    }
     render(){
         var row = this.state.row;
         return(
-          <TouchableHighlight>
+          <TouchableHighlight onPress={this.props.onSelect}>
               <View style={styles.item}>
                   <Text style={styles.title}>{row.title}</Text>
                   <Image source={{uri:row.thumb}} style={styles.thumb}>
@@ -103,7 +108,11 @@ class List extends Component {
 
     _renderRow(row){
         return(
-          <Item row={row} />
+          <Item
+            row={row}
+            key={row._id}
+            onSelect={this._loadPage.bind(this,row)}
+          />
         );
     }
 
@@ -347,6 +356,17 @@ var styles = StyleSheet.create({
     down:{
         color:'red',
         fontWeight:'bold'
+    },
+
+    ler:{
+      flex:1,
+      paddingTop:70,
+      paddingBottom:70,
+      flexWrap:'nowrap',
+      flexDirection:'row',
+      justifyContent:'space-between',
+      alignItems:'flex-end',
+      backgroundColor:'#ff6600',
     }
 
 })
