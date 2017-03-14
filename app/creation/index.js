@@ -15,7 +15,7 @@ import {
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-
+var Detail = require('./Detail')
 
 var Mock = require('mockjs');
 var request = require('../common/request');
@@ -68,12 +68,6 @@ class Item extends Component {
                 alert('点赞失败，稍后重试2');
           })
     }
-    _loadPage(){
-        this.props.navigator.push({
-            name:'detail',
-            component:Detail
-        });
-    }
     render(){
         var row = this.state.row;
         return(
@@ -111,7 +105,7 @@ class List extends Component {
           <Item
             row={row}
             key={row._id}
-            onSelect={this._loadPage.bind(this,row)}
+            onSelect={() => this._loadPage(row)}
           />
         );
     }
@@ -229,7 +223,15 @@ class List extends Component {
         );
 
     }
-    render(){
+
+  _loadPage(){
+    this.props.navigator.push({
+      name:'detail',
+      component:Detail
+    });
+  }
+
+  render(){
         return(
             <View style={styles.container}>
                 <View style={styles.header}>
